@@ -1,0 +1,103 @@
+html {
+    /* header */
+    --pst-header-height: 3.2rem;
+
+    /* Font family */
+    --pst-font-family-base-system: -apple-system, Inter, 源柔ゴシックL,
+        Noto Sans JP, "BlinkMacSystemFont", "Segoe UI", "Helvetica Neue",
+        "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    --pst-font-family-monospace-system: HackGen, "SFMono-Regular", "Menlo",
+        "Consolas", "Monaco", "Liberation Mono", "Lucida Console", monospace;
+
+    /* heading font sizes based on bootstrap sizing */
+    --pst-font-size-base: 1em;
+    --pst-font-size-h1: 2em;
+    --pst-font-size-h2: 1.5625em;
+    --pst-font-size-h3: 1.25em;
+    --pst-font-size-h4: 1em;
+    --pst-font-size-h5: 0.8em;
+    --pst-font-size-h6: 0.8em;
+
+    --linear-gradient: linear-gradient(135deg, #6fc3e2, #6791e0, #ac83e2);
+}
+
+html[data-theme="light"] {
+    --footer-bg-color: var(--pst-color-background);
+}
+
+html[data-theme="dark"] {
+    --pst-color-background: #2e303e;
+    --pst-color-on-background: rgb(34, 40, 50, 0.6);
+    --footer-bg-color: #16161c;
+}
+
+h1 + h2 {
+    margin-top: 0;
+}
+
+h2 {
+    margin: 2.4em 0 0.64em;
+    padding: 0.5em 0;
+}
+
+h2:after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: var(--linear-gradient);
+    margin-top: 0.4em;
+}
+
+h2 + h3 {
+    margin-top: 1.6em;
+}
+
+h3 {
+    border-bottom: 1px solid var(--pst-color-border);
+    padding: 0.5em 0;
+}
+
+.bd-header {
+    background: var(--linear-gradient);
+}
+
+.navbar-brand p,
+.bd-header .navbar-nav li.pst-header-nav-item > .dropdown-toggle,
+.bd-header .navbar-nav li.pst-header-nav-item > .nav-link {
+    color: white;
+}
+
+.bd-header .navbar-nav li.pst-header-nav-item.current > .nav-link {
+    /* color: var(--pst-color-primary); */
+    color: #eee;
+}
+
+.bd-header .navbar-nav li.pst-header-nav-item.current > .nav-link::before {
+    /* border-bottom: 3px solid var(--pst-color-primary); */
+    border-bottom: 3px solid #eee;
+}
+
+.search-button-field {
+    background-color: #00000042;
+}
+
+.search-button-field {
+    color: white;
+    border: inherit;
+    border-radius: 0.1rem;
+}
+
+.theme-switch-button {
+    color: white;
+}
+
+.bd-footer {
+    font-size: 0.9em;
+    background-color: var(--footer-bg-color);
+}
+
+/* prev, nextをcontainerの下部に固定 */
+.bd-article-container > footer {
+    margin-top: auto;
+}

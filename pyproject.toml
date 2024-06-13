@@ -1,0 +1,32 @@
+[project]
+name = "memo"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "tnmt", email = "tanimoto.masashi@protonmail.com" }
+]
+dependencies = [
+    "sphinx>=7.3.7",
+    "sphinx-autobuild>=2024.4.16",
+    "furo>=2024.5.6",
+    "pydata-sphinx-theme>=0.15.3",
+    "sphinxcontrib-mermaid>=0.9.2",
+    "sphinxemoji>=0.3.1",
+    "sphinx-copybutton>=0.5.2",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/memo"]
