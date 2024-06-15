@@ -45,3 +45,7 @@ html_theme_options = {
         "text": "淡々と",
     }
 }
+
+mermaid_init_js = """
+mermaid.initialize({theme: "dark", themeVariables: {darkMode: true}});
+"""
