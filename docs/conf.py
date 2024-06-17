@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "淡々と"
+project = "つくえ"
 copyright = "2024, Tanimoto Masashi"
 author = "Tanimoto Masashi"
 
@@ -42,7 +42,7 @@ html_theme_options = {
     "logo": {
         "image_light": "_static/logo.png",
         "image_dark": "_static/logo.png",
-        "text": "淡々と",
+        "text": "つくえ",
     }
 }
 
