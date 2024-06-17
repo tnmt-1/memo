@@ -10,3 +10,4 @@ Home
    /開発環境/index
    /システム開発/index
    /目標管理/index
+   /仕事/index
