@@ -20,4 +20,4 @@ rye sync
 rye run sphinx-autobuild docs docs/_build/ -a
 ```
 
-<http::localhost:8000> で確認できます。
+<http://localhost:8000> で確認できます。
