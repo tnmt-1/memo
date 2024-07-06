@@ -19,6 +19,7 @@ extensions = [
     "sphinx_copybutton",
     "sphinx_sitemap",
     "myst_parser",
+    'sphinxcontrib.images',
 ]
 
 templates_path = ["_templates"]
