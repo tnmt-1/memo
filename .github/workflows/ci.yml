@@ -6,8 +6,6 @@ on:
             - main
 permissions:
     contents: write
-    pages: write
-    id-token: write
 jobs:
     deploy:
         runs-on: ubuntu-latest
@@ -20,17 +18,12 @@ jobs:
             - uses: actions/setup-python@v5
               with:
                   python-version: 3.x
-            - name: Install dependencies
-              run: pip install -r requirements.lock
-            - name: Build Sphinx
-              run: sphinx-build docs/ docs/_build/ -W
-            - name: Setup Pages
-              uses: actions/configure-pages@v3
-            - name: Upload artifact
-              uses: actions/upload-pages-artifact@v2
+            - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
+            - uses: actions/cache@v4
               with:
-                  # Upload entire repository
-                  path: "./docs/_build/"
-            - name: Deploy to GitHub Pages
-              id: deployment
-              uses: actions/deploy-pages@v2
+                  key: mkdocs-material-${{ env.cache_id }}
+                  path: .cache
+                  restore-keys: |
+                      mkdocs-material-
+            - run: pip install -r requirements.lock
+            - run: mkdocs gh-deploy --force

@@ -1,4 +1,4 @@
-# My Memo
+# tnmt-1.github.io
 
 日々の出来事やプログラミング関連のことなどを書いていきます。
 
@@ -6,7 +6,7 @@
 
 - Python3
 - rye
-    - sphinxです
+    - mkdocsです。
 
 ## インストール
 
@@ -17,7 +17,7 @@ rye sync
 ## サーバ実行
 
 ```shell
-rye run sphinx-autobuild docs docs/_build/ -a
+rye run mkdocs serve
 ```
 
-<http://localhost:8000> で確認できます。
+<http::localhost:8000> で確認できます。
